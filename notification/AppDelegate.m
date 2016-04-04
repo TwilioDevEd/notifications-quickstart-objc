@@ -16,7 +16,7 @@
   // Override point for customization after application launch.
   if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
     [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings
-                                                       settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge)
+                                                       settingsForTypes:(UIUserNotificationTypeAlert)
                                                              categories:nil]];
       
     [[UIApplication sharedApplication] registerForRemoteNotifications];
