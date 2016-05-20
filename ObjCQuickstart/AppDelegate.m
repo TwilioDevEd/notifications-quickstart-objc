@@ -16,9 +16,9 @@
   // Override point for customization after application launch.
   if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
     [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings
-                                                       settingsForTypes:(UIUserNotificationTypeAlert)
-                                                             categories:nil]];
-      
+                                                                         settingsForTypes:(UIUserNotificationTypeAlert)
+                                                                         categories:nil]];
+    
     [[UIApplication sharedApplication] registerForRemoteNotifications];
   } else {
     [[UIApplication sharedApplication] registerForRemoteNotifications];
@@ -68,15 +68,15 @@
   UIAlertController * alert= [UIAlertController alertControllerWithTitle:@"Notification"
                                                                  message:[userInfo valueForKeyPath:@"aps.alert"]
                                                           preferredStyle:UIAlertControllerStyleAlert];
-
+  
   UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"OK"
                                                      style:UIAlertActionStyleDefault
                                                    handler:^(UIAlertAction * action) {
                                                      [alert dismissViewControllerAnimated:YES completion:nil];
                                                    }];
-    
+  
   [alert addAction:okButton];
-
+  
   [self.window.rootViewController presentViewController:alert
                                                animated:YES
                                              completion:nil];
