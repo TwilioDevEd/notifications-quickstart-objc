@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:notification.xcodeproj">
+      location = "self:ObjCQuickstart.xcodeproj">
    </FileRef>
 </Workspace>
