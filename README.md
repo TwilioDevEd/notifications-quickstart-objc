@@ -33,14 +33,6 @@ Your application should now be running at [http://localhost:3000](http://localho
 ##Please Note
 You'll need to test this on the device, since the iOS simulator can't receive notifications. To test on device, your server will need to be on the public Internet. For this, you might consider using a solution like [ngrok](https://ngrok.com/).
 
-## Setting Up The iOS App
-After downloading or cloning the app, in a terminal window enter the following
-
-    pod install
-
-This will install the necessary dependency (AFNetworking). Once it's installed you
-can go ahead and open 'notification.xcworkspace'. 
-
 In the ViewController file, on this line,
 
     static NSString * serverURL = @"http://YOUR_WEB_APP/register";
