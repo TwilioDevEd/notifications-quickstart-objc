@@ -36,7 +36,7 @@ You'll need to test this on the device, since the iOS simulator can't receive no
 ## Setting Up The iOS App
 After downloading or cloning the app, in a terminal window enter the following
 
-    'pod install'
+    pod install
 
 This will install the necessary dependency (AFNetworking). Once it's installed you
 can go ahead and open 'notification.xcworkspace'. 
