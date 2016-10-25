@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <UserNotifications/UserNotifications.h>
+
 @interface AppDelegate ()
 @end
 
@@ -14,7 +16,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
-  if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+  if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0) {
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        if (granted) {
+            [[UIApplication sharedApplication] registerForRemoteNotifications];
+        }
+    }];
+  } else if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
     [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings
                                                                          settingsForTypes:(UIUserNotificationTypeAlert)
                                                                          categories:nil]];
@@ -62,6 +71,8 @@
     NSLog(@"deviceToken: %@", deviceToken);
   });
 }
+
+
 
 -(void) application:(UIApplication *) application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo {
   // Present the user with an alert when a notification is received
