@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		285E76C51DBFC86C00210155 /* ObjCQuickstart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ObjCQuickstart.entitlements; sourceTree = "<group>"; };
 		28C0DAA91CEE57EA00E3AAFD /* ObjCQuickstart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjCQuickstart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C0DAAD1CEE57EB00E3AAFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28C0DAAF1CEE57EB00E3AAFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		28C0DAAB1CEE57EB00E3AAFD /* ObjCQuickstart */ = {
 			isa = PBXGroup;
 			children = (
+				285E76C51DBFC86C00210155 /* ObjCQuickstart.entitlements */,
 				28C0DAAF1CEE57EB00E3AAFD /* AppDelegate.h */,
 				28C0DAB01CEE57EB00E3AAFD /* AppDelegate.m */,
 				28C0DAB21CEE57EB00E3AAFD /* ViewController.h */,
@@ -270,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ObjCQuickstart/ObjCQuickstart.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ObjCQuickstart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -283,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ObjCQuickstart/ObjCQuickstart.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ObjCQuickstart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
