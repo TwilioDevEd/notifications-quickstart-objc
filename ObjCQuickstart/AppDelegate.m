@@ -32,6 +32,24 @@
   } else {
     [[UIApplication sharedApplication] registerForRemoteNotifications];
   }
+    
+  self.apnsEnvironment = [[[ProvisioningProfileInspector alloc] init] APNSEnvironment];
+    switch (self.apnsEnvironment) {
+      case APNSEnvironmentUnknown:
+        NSLog(@"APNS Environment detected as Unknown");
+        break;
+      case APNSEnvironmentDevelopment:
+        NSLog(@"APNS Environment detected as Development");
+        break;
+      case APNSEnvironmentProduction:
+        NSLog(@"APNS Environment detected as Production");
+        break;
+      default:
+        break;
+    }
+
+ 
+    
   return YES;
 }
 

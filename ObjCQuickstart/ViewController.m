@@ -53,11 +53,13 @@ static NSString *serverURL = @"http://YOUR_SERVER_HERE/register";
   [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
   [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
   
+  AppDelegate *appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     
   NSDictionary *params = @{@"identity": identity,
                            @"endpoint": [NSString stringWithFormat:@"%@,%@", identity, deviceTokenString],
                         @"BindingType": @"apn",
-                            @"Address": deviceTokenString};
+                            @"Address": deviceTokenString,
+                           @"Sandbox": appDelegate.apnsEnvironment == APNSEnvironmentDevelopment ? @"True" : @"False"};
   
   NSError *error;
   NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params options:0 error:&error];

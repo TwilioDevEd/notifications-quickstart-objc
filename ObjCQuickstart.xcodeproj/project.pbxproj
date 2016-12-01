@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2861736C1DEF56E600247541 /* ProvisioningProfileInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861736B1DEF536500247541 /* ProvisioningProfileInspector.m */; };
 		28C0DAAE1CEE57EB00E3AAFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C0DAAD1CEE57EB00E3AAFD /* main.m */; };
 		28C0DAB11CEE57EB00E3AAFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C0DAB01CEE57EB00E3AAFD /* AppDelegate.m */; };
 		28C0DAB41CEE57EB00E3AAFD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C0DAB31CEE57EB00E3AAFD /* ViewController.m */; };
@@ -17,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		285E76C51DBFC86C00210155 /* ObjCQuickstart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ObjCQuickstart.entitlements; sourceTree = "<group>"; };
+		2861736A1DEF535800247541 /* ProvisioningProfileInspector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProvisioningProfileInspector.h; sourceTree = "<group>"; };
+		2861736B1DEF536500247541 /* ProvisioningProfileInspector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProvisioningProfileInspector.m; sourceTree = "<group>"; };
 		28C0DAA91CEE57EA00E3AAFD /* ObjCQuickstart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjCQuickstart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C0DAAD1CEE57EB00E3AAFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28C0DAAF1CEE57EB00E3AAFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,6 +67,8 @@
 				28C0DAB01CEE57EB00E3AAFD /* AppDelegate.m */,
 				28C0DAB21CEE57EB00E3AAFD /* ViewController.h */,
 				28C0DAB31CEE57EB00E3AAFD /* ViewController.m */,
+				2861736A1DEF535800247541 /* ProvisioningProfileInspector.h */,
+				2861736B1DEF536500247541 /* ProvisioningProfileInspector.m */,
 				28C0DAB51CEE57EB00E3AAFD /* Main.storyboard */,
 				28C0DAB81CEE57EB00E3AAFD /* Assets.xcassets */,
 				28C0DABA1CEE57EB00E3AAFD /* LaunchScreen.storyboard */,
@@ -156,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2861736C1DEF56E600247541 /* ProvisioningProfileInspector.m in Sources */,
 				28C0DAB41CEE57EB00E3AAFD /* ViewController.m in Sources */,
 				28C0DAB11CEE57EB00E3AAFD /* AppDelegate.m in Sources */,
 				28C0DAAE1CEE57EB00E3AAFD /* main.m in Sources */,
@@ -274,6 +280,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ObjCQuickstart/ObjCQuickstart.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ObjCQuickstart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -288,6 +295,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ObjCQuickstart/ObjCQuickstart.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ObjCQuickstart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
