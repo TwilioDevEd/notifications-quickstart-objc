@@ -20,7 +20,7 @@ You'll only need to download one of those. Not sure which one to choose? The [No
 Follow the directions in the README on one of the above servers, and get the web client up and running to make sure you have everything configured right for the demos you are interested in.  
 
 ##Please Note
-You'll need to test this on the device, since the iOS simulator can't receive notifications. To test on device, your server will need to be on the public Internet. For this, you might consider using a solution like [ngrok](https://ngrok.com/).
+You'll need to test this on the device, since the iOS simulator can't receive notifications. To test on a device, your server will need to be on the public Internet. For this, you might consider using a solution like [ngrok](https://ngrok.com/).
 
 In the ViewController file, on this line,
 
@@ -35,7 +35,7 @@ Endpoint | This is a unique device ID and identity combination that can receive 
 Bindingtype | This lets the web app know which service to register with (APNS or GCM).
 Address | This is the unique device identifier of the mobile client.
 
-Once you've entered your URL, you can compile & run the app. Enter in an identity in the text field that's presented. Once you tap register, the app will register your device with APNS and return a JSON response object if successful. After that, visit the Notify page on your server web application, and send a notification to the identity you registered as to receive a push notification in your app.
+Once you've entered your URL, you can compile and run the app. Enter an identity in the text field that's presented. Once you tap register, the app will register your device with APNS and return a JSON response object if successful. After that, visit the Notify page on your server web application, and send a notification to the identity you registered as to receive a push notification in your app.
 
 That's it!
 
