@@ -15,7 +15,7 @@
 
 @end
 
-static NSString *serverURL = @"http://YOUR_SERVER_HERE/register";
+static NSString *serverURL = @"https://YOUR_SERVER_HERE.twil.io/register-binding";
 
 @implementation ViewController
 
