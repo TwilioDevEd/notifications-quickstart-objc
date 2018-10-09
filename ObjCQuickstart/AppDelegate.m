@@ -81,7 +81,7 @@
 -(void) application:(UIApplication *) application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo {
   // Present the user with an alert when a notification is received
   UIAlertController * alert= [UIAlertController alertControllerWithTitle:@"Notification"
-                                                                 message:[userInfo valueForKeyPath:@"aps.alert"]
+                                                                 message:[userInfo valueForKeyPath:@"aps.alert.body"]
                                                           preferredStyle:UIAlertControllerStyleAlert];
   
   UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"OK"
