@@ -20,7 +20,9 @@
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
     [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert) completionHandler:^(BOOL granted, NSError * _Nullable error) {
         if (granted) {
-            [[UIApplication sharedApplication] registerForRemoteNotifications];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[UIApplication sharedApplication] registerForRemoteNotifications];
+            });
         }
     }];
   } else if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
@@ -79,7 +81,7 @@
 -(void) application:(UIApplication *) application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo {
   // Present the user with an alert when a notification is received
   UIAlertController * alert= [UIAlertController alertControllerWithTitle:@"Notification"
-                                                                 message:[userInfo valueForKeyPath:@"aps.alert"]
+                                                                 message:[userInfo valueForKeyPath:@"aps.alert.body"]
                                                           preferredStyle:UIAlertControllerStyleAlert];
   
   UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"OK"
